@@ -1,0 +1,238 @@
+
+ipodl@6699Dx MINGW64 ~/OneDrive/Escritorio/SENA
+$ cd GitHub
+
+ipodl@6699Dx MINGW64 ~/OneDrive/Escritorio/SENA/GitHub
+$ git init
+Initialized empty Git repository in C:/Users/ipodl/OneDrive/Escr
+itorio/SENA/GitHub/.git/
+
+ipodl@6699Dx MINGW64 ~/OneDrive/Escritorio/SENA/GitHub (master)
+$ git log
+fatal: your current branch 'master' does not have any commits ye
+t
+
+ipodl@6699Dx MINGW64 ~/OneDrive/Escritorio/SENA/GitHub (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+nothing added to commit but untracked files present (use "git ad
+d" to track)
+
+ipodl@6699Dx MINGW64 ~/OneDrive/Escritorio/SENA/GitHub (master)
+$ git add .
+
+ipodl@6699Dx MINGW64 ~/OneDrive/Escritorio/SENA/GitHub (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.html
+
+
+ipodl@6699Dx MINGW64 ~/OneDrive/Escritorio/SENA/GitHub (master)
+$ git commit -m "Primer Commit"
+[master (root-commit) bb8331d] Primer Commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.html
+
+ipodl@6699Dx MINGW64 ~/OneDrive/Escritorio/SENA/GitHub (master)
+$ git log
+commit bb8331ddc8594e5728c5485424325d9e0a4fe0df (HEAD -> master)
+Author: Andrés Valencia <ipodlayer@gmail.com>
+Date:   Mon Apr 4 02:40:00 2022 -0500
+
+    Primer Commit
+
+ipodl@6699Dx MINGW64 ~/OneDrive/Escritorio/SENA/GitHub (master)
+$ git branch
+* master
+
+ipodl@6699Dx MINGW64 ~/OneDrive/Escritorio/SENA/GitHub (master)
+$ git branch experimental
+
+ipodl@6699Dx MINGW64 ~/OneDrive/Escritorio/SENA/GitHub (master)
+$ git show-branch
+! [experimental] Primer Commit
+ * [master] Primer Commit
+--
++* [experimental] Primer Commit
+
+ipodl@6699Dx MINGW64 ~/OneDrive/Escritorio/SENA/GitHub (master)
+$ git checkout experimental
+Switched to branch 'experimental'
+
+ipodl@6699Dx MINGW64 ~/OneDrive/Escritorio/SENA/GitHub (experimental)
+$ git checkout -b otrarama
+Switched to a new branch 'otrarama'
+
+ipodl@6699Dx MINGW64 ~/OneDrive/Escritorio/SENA/GitHub (otrarama)
+$ git show-branch
+! [experimental] Primer Commit
+ ! [master] Primer Commit
+  * [otrarama] Primer Commit
+---
+++* [experimental] Primer Commit
+
+ipodl@6699Dx MINGW64 ~/OneDrive/Escritorio/SENA/GitHub (otrarama)
+$ git checkout experimental
+Switched to branch 'experimental'
+
+ipodl@6699Dx MINGW64 ~/OneDrive/Escritorio/SENA/GitHub (experimental)
+$ git status
+On branch experimental
+nothing to commit, working tree clean
+
+ipodl@6699Dx MINGW64 ~/OneDrive/Escritorio/SENA/GitHub (experimental)
+$ git push origin experimental
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+ipodl@6699Dx MINGW64 ~/OneDrive/Escritorio/SENA/GitHub (experimental)
+$ git checkout master
+Switched to branch 'master'
+
+ipodl@6699Dx MINGW64 ~/OneDrive/Escritorio/SENA/GitHub (master)
+$ git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+ipodl@6699Dx MINGW64 ~/OneDrive/Escritorio/SENA/GitHub (master)
+$ git push GitHub master
+fatal: 'GitHub' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+ipodl@6699Dx MINGW64 ~/OneDrive/Escritorio/SENA/GitHub (master)
+$ git commit -m "Cambios 2"
+On branch master
+nothing to commit, working tree clean
+
+ipodl@6699Dx MINGW64 ~/OneDrive/Escritorio/SENA/GitHub (master)
+$ git push -f
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remo
+te repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+
+ipodl@6699Dx MINGW64 ~/OneDrive/Escritorio/SENA/GitHub (master)
+$ git branch -M main
+
+ipodl@6699Dx MINGW64 ~/OneDrive/Escritorio/SENA/GitHub (main)
+$ git remote add origin https://github.com/DrewIlargi/Github.git
+
+ipodl@6699Dx MINGW64 ~/OneDrive/Escritorio/SENA/GitHub (main)
+$ git push -u origin main
+remote: Repository not found.
+fatal: repository 'https://github.com/DrewIlargi/Github.git/' no
+t found
+
+ipodl@6699Dx MINGW64 ~/OneDrive/Escritorio/SENA/GitHub (main)
+$ git remote add origin https://github.com/DrewIlargi/Prueba1.git
+error: remote origin already exists.
+
+ipodl@6699Dx MINGW64 ~/OneDrive/Escritorio/SENA/GitHub (main)
+$ git remote add origin https://github.com/DrewIlargi/GitHub.git
+error: remote origin already exists.
+
+ipodl@6699Dx MINGW64 ~/OneDrive/Escritorio/SENA/GitHub (main)
+$ git remote add origen https://github.com/DrewIlargi/GitHub.git
+ipodl@6699Dx MINGW64 ~/OneDrive/Escritorio/SENA/GitHub (main)
+$ git remote add origin https://github.com/DrewIlargi/GitHub.giterror: remote origin already exists.
+
+ipodl@6699Dx MINGW64 ~/OneDrive/Escritorio/SENA/GitHub (main)
+$ git branch -M main
+
+ipodl@6699Dx MINGW64 ~/OneDrive/Escritorio/SENA/GitHub (main)
+$ git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 224 bytes | 14.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/DrewIlargi/GitHub.git
+To https://github.com/DrewIlargi/Github.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+ipodl@6699Dx MINGW64 ~/OneDrive/Escritorio/SENA/GitHub (main)
+$ git branch -M experimental
+
+ipodl@6699Dx MINGW64 ~/OneDrive/Escritorio/SENA/GitHub (experimental)
+$ git push -u origin experimental
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/DrewIlargi/GitHub.git
+remote:
+remote: Create a pull request for 'experimental' on GitHub by vi
+siting:
+remote:      https://github.com/DrewIlargi/GitHub/pull/new/exper
+imental
+remote:
+To https://github.com/DrewIlargi/Github.git
+ * [new branch]      experimental -> experimental
+branch 'experimental' set up to track 'origin/experimental'.
+
+ipodl@6699Dx MINGW64 ~/OneDrive/Escritorio/SENA/GitHub (experimental)
+$ git show-branch+
+
+ipodl@6699Dx MINGW64 ~/OneDrive/Escritorio/SENA/GitHub (experimental)
+$ git show-branch
+* [experimental] Primer Commit
+ ! [otrarama] Primer Commit
+--
+*+ [experimental] Primer Commit
+
+ipodl@6699Dx MINGW64 ~/OneDrive/Escritorio/SENA/GitHub (experimental)
+$ git status
+On branch experimental
+Your branch is up to date with 'origin/experimental'.
+
+nothing to commit, working tree clean
+
+ipodl@6699Dx MINGW64 ~/OneDrive/Escritorio/SENA/GitHub (experimental)
+$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 648 bytes | 0 bytes/s, done.
+From https://github.com/DrewIlargi/Github
+   bb8331d..3eec239  experimental -> origin/experimental
+Updating bb8331d..3eec239
+Fast-forward
+ index.html | 1 +
+ 1 file changed, 1 insertion(+)
+
+ipodl@6699Dx MINGW64 ~/OneDrive/Escritorio/SENA/GitHub (experimental)
+$ git show-branch
+* [experimental] Update index.html
+ ! [otrarama] Primer Commit
+--
+*  [experimental] Update index.html
+*+ [otrarama] Primer Commit
+
+ipodl@6699Dx MINGW64 ~/OneDrive/Escritorio/SENA/GitHub (experimental)
+$
